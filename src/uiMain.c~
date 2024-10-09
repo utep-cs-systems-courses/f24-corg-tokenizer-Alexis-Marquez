@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include "tokenizer.h"
+#include <stdlib.h>
+int main(){
+  char str[100];
+  printf("Enter string: ");
+  fgets(str, sizeof(str), stdin);
+  printf("You entered: %s\n", str);
+  char **tokens = tokenize(str);
+  print_tokens(tokens);
+  printf("Passed\n");
+}
