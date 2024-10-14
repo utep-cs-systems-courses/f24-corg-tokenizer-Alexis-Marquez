@@ -27,6 +27,9 @@ void add_history(List *list, char *str){
 char *get_history(List *list, int id){
   Item *currItem = list->root;
   int i = 1;
+  if(id<=0){
+    return NULL;
+  }
   while(currItem != NULL && i<id){
     currItem = currItem->next;
     i++;
